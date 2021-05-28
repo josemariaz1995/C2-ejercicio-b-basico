@@ -71,6 +71,7 @@ function estadisticasPersonas(array) {
 }
 console.log(estadisticasPersonas(personas));
 
+//5.
 const empresas = [
   {
     empresa: "FRIME",
@@ -126,9 +127,7 @@ function sueldoMedioEmpresaMayores30(objEmpresas) {
       )
   );
   for (let i in objEmpresas) {
-    console.log(objEmpresas[i]);
     return `En la Empresa ${objEmpresas[i].empresa} el sueldo medio en los mayores de 30 es de ${euro[i]} €`;
-    ++i;
   }
 }
 console.log(sueldoMedioEmpresaMayores30(empresas));
