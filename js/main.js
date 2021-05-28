@@ -127,7 +127,9 @@ function sueldoMedioEmpresaMayores30(objEmpresas) {
       )
   );
   for (let i in objEmpresas) {
-    return `En la Empresa ${objEmpresas[i].empresa} el sueldo medio en los mayores de 30 es de ${euro[i]} €`;
+    console.log(
+      `En la Empresa ${objEmpresas[i].empresa} el sueldo medio en los mayores de 30 es de ${euro[i]} €`
+    );
   }
 }
-console.log(sueldoMedioEmpresaMayores30(empresas));
+sueldoMedioEmpresaMayores30(empresas);
