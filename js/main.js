@@ -1,4 +1,4 @@
-const palabras = ["Luis", "es", "programador", " de", "aplicaciones", " web"];
+const palabras = ["Luis", "es", "progr amador", " de", "aplicaciones", " web"];
 const cantidad = 2;
 
 //1.
@@ -26,7 +26,7 @@ calculadorMediaDePalabras(palabras);
 function inspeccionadorDePalabrasConEspacio(array) {
   const palabrasConEspacio = array
     .filter((palabra) => palabra.indexOf(" ") >= 0)
-    .map((palabra) => palabra.toUpperCase());
+    .map((palabra) => palabra.toUpperCase().replace(/\s/g, ""));
   console.log(`Las palabras con espacio son ${[...palabrasConEspacio]}`);
 }
 inspeccionadorDePalabrasConEspacio(palabras);
