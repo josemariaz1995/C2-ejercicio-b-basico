@@ -1,4 +1,12 @@
-const palabras = ["Luis", "es", "progr amador", " de", "aplicaciones", " web"];
+const palabras = [
+  "Luis",
+  "es",
+  "progr amador",
+  " de",
+  "aplicacion   es",
+  " web",
+  "JA JA JA JA",
+];
 const cantidad = 2;
 
 //1.
@@ -15,7 +23,8 @@ comparadorLongitudDeStrings(palabras, cantidad);
 //2.
 function calculadorMediaDePalabras(array) {
   const numero = array.reduce(
-    (contador, palabra, i, array) => contador + palabra.length / array.length,
+    (contador, palabra, i, array) =>
+      contador + palabra.replace(/\s/g, "").length / array.length,
     0
   );
   console.log(`La media del numero de letras en las strings es ${numero}`);
