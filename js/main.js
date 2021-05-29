@@ -12,7 +12,7 @@ const cantidad = 2;
 //1.
 function comparadorLongitudDeStrings(array, numeroLetras) {
   const cuantasPalabras = array
-    .filter((palabra, numeroLetras) => palabra.length > numeroLetras)
+    .filter((palabra) => palabra.replace(/\s/g, "").length > numeroLetras)
     .reduce((contador) => ++contador, 0);
   console.log(
     `${cuantasPalabras} palabras tienen una longitud mayor a ${numeroLetras}`
@@ -23,7 +23,7 @@ comparadorLongitudDeStrings(palabras, cantidad);
 //2.
 function calculadorMediaDePalabras(array) {
   const numero = array.reduce(
-    (contador, palabra, i, array) =>
+    (contador, palabra) =>
       contador + palabra.replace(/\s/g, "").length / array.length,
     0
   );
@@ -34,7 +34,7 @@ calculadorMediaDePalabras(palabras);
 //3.
 function inspeccionadorDePalabrasConEspacio(array) {
   const palabrasConEspacio = array
-    .filter((palabra) => palabra.indexOf(" ") >= 0)
+    .filter((palabra) => palabra.includes(" "))
     .map((palabra) => palabra.toUpperCase().replace(/\s/g, ""));
   console.log(`Las palabras con espacio son ${[...palabrasConEspacio]}`);
 }
